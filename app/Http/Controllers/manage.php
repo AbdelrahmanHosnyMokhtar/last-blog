@@ -33,8 +33,9 @@ class manage extends Controller
                 $filename= time() . '.' . $image->getClientOriginalExtension() ;
                 $location= public_path('image/'.$filename);
                 Image::make($image)->resize(800,400)->save($location);
+                
+                $ar-> image = $filename ;
             }
-            $ar-> image = $filename ;
             $ar->save();
 
             return redirect('view')  ;
@@ -61,7 +62,7 @@ class manage extends Controller
         }
         $article=Article::find($id);
         $artc=Array('article'=>$article);
-        return view ('manage.read',$artc  ) ;
+        return view ('manage.read',$artc) ;
     }
     public function profile(){
         return view('profile', array('user' => Auth::user()) );
