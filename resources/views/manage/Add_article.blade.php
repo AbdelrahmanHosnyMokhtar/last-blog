@@ -15,6 +15,9 @@
                 <input type="file" value="add photo" class="btn btn-block" name="image" > <br>
                 <input  type="submit" value="add new" class="btn btn-primary">
             </div>
+
+
         </form>
+
     </div>
 @endsection

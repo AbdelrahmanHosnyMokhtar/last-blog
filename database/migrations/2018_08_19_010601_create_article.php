@@ -15,10 +15,11 @@ class CreateArticle extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
             $table->string('title');
             $table->text('body') ;
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned();
             $table->string('image')->nullable();
 
         });

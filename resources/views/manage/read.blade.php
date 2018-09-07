@@ -102,12 +102,15 @@
             {{$article->title}}
         </h1>
 
+        @foreach($users=\App\User::all()  as $us)
 
-        <ASIDE class="yee">
-            BY:
-            <img class="img_av" src="{{asset('image/'.$article->user->avatar)}}" >
-            <a class="lin" href="{{"/prof/".$article->user_id}}">   <h4>{{$article->user->name}}</h4></a>
-        </ASIDE>
+
+            <ASIDE class="yee">
+                BY:
+                <img class="img_av" src="{{asset('image/'.$us->avatar)}}" >
+                <a class="lin" href="{{"/prof/".$article->user_id}}">   <h4>{{$us->name}}</h4></a>
+            </ASIDE>
+@endforeach
 
         <div class="ar_body">
         <h5 >

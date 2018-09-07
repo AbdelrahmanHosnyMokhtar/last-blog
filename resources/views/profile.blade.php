@@ -12,10 +12,10 @@
                 <label>Update Profile Image</label>
                 <input type="file" name="avatar">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <br>
+            </br>
                 <label>Information</label>
                 <textarea type="text" id="inform" name="inform" placeholder="about you" style=""></textarea>
-            <br>
+            </br>
                 <input type="submit" class="pull-right btn btn-sm btn-primary">
 
             </form>
