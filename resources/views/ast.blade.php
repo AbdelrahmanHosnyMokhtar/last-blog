@@ -21,7 +21,6 @@
 
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
@@ -129,12 +128,12 @@
       @include('manage.articles')
     @endforeach
 @endforeach
-
-    @foreach($articles=\App\Article::orderBy('created_at','desc')->paginate() as $art)
-        @include('manage.posts')
+.
+@foreach($articles=\App\Article::orderBy('created_at','desc')->paginate() as $art)
+            @include('manage.posts')
     @endforeach
-@
 
+.
 <!-- jQuery Plugins -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

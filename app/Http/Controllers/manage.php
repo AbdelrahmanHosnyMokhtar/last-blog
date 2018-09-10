@@ -33,8 +33,9 @@ class manage extends Controller
                 $filename= time() . '.' . $image->getClientOriginalExtension() ;
                 $location= public_path('image/'.$filename);
                 Image::make($image)->resize(800,400)->save($location);
+                
+                $ar-> image = $filename ;
             }
-            $ar-> image = $filename ;
             $ar->save();
 
             return redirect('view')  ;
@@ -61,7 +62,7 @@ class manage extends Controller
         }
         $article=Article::find($id);
         $artc=Array('article'=>$article);
-        return view ('manage.read',$artc  ) ;
+        return view ('manage.read',$artc) ;
     }
     public function profile(){
         return view('profile', array('user' => Auth::user()) );
@@ -71,7 +72,7 @@ class manage extends Controller
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/image/' . $filename ) );
+            Image::make($avatar)->resize(200, 300)->save( public_path('/image/' . $filename ) );
             $user = Auth::user();
             $user-> avatar = $filename;
             $user->save();

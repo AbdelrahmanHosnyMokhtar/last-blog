@@ -596,16 +596,18 @@ textarea.input {
 }
 
 .article .article-title {
-	text-transform: uppercase;
 	margin-top:0px;
 }
 
 .article .article-title > a {
 	font-weight:700;
+	color: #FFFFFF;
 }
-
+.article .article-title > a:hover {
+	text-decoration: none;
+	color: red;
+}
 .article .article-meta {
-	margin-bottom: 3px;
 	margin-top: 10px;
 }
 
@@ -666,20 +668,21 @@ textarea.input {
 }
 
 .article.thumb-article .article-body .article-title > a:hover {
-	color: #DDD;
+	color: red;
 }
 
 /*------------------------------------*\
 	Widget Article
 \*------------------------------------*/
 .article.widget-article{
-    width:515px;
+    width:410px;
 	background-color: #000000;
 	border: 1px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-left: 25px;
+	margin: 10px;
+	height: 300px;
 }
 
 
@@ -691,16 +694,19 @@ textarea.input {
 
 .article.widget-article .article-img {
 	float:left;
-	width:250px;
-	margin-right:10px;
-	margin-bottom:0px;
+
+	height: 300px;
 }
 
 .article.widget-article .article-title {
 	font-size:20px;
     text-align: center;
 	margin-top:120px;
+	position: absolute;
 
+}
+.article-metaa li{
+  background-color: black;
 }
 
 /*------------------------------------*\
